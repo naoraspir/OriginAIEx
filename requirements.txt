@@ -1,6 +1,6 @@
+transformers[sentencepiece]
+tensorflow-cpu
 fastapi
 uvicorn
-transformers[tf-cpu]
-sentencepiece
 pytest
 pytest-cov

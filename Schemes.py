@@ -1,6 +1,7 @@
 from typing import Optional
 from pydantic import BaseModel
 
+# These classes are used to validate the request and response data by FastAPI and Pydantic
 class TranslationRequest(BaseModel):
     src_text: str
     src_lang: str

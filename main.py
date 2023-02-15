@@ -46,7 +46,7 @@ async def get_translation(body: TranslationRequest):
     # Validation of the request body is served from the Schemes.py file
     # We will now check the rquest
     if validate_requset(body): 
-        translated = str(tranlator[body.src_lang.lower()].translate(body.src_text))# We will not support batch translate in this version but it ready
+        translated = str(tranlator[body.src_lang.lower()].translate(body.src_text))# We will not support batch translate in this version but its ready
         global request_id_counter
         request_id_counter += 1
         trg_lang = body.trg_lang
@@ -67,5 +67,6 @@ async def get_translation(body: TranslationRequest):
         raise HTTPException(status_code=400, detail="Server error")
     
 if __name__ == "__main__":
+    # We will run the app on the port 5000
 	port = int(os.environ.get('PORT', 5000))
 	run(app, host="0.0.0.0", port=port)
