@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+transformers[tf-cpu]
+sentencepiece
+pytest
+pytest-cov
